@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "capability.proto";
+import "requirement.proto";
+
+message Descriptor {
+    string name = 1;    // The name of the descriptor
+    string human_readable_name = 2;    // The human readable name of the descriptor
+    string human_readable_description = 3;  // The human readable description of the descriptor
+
+    message Configuration {
+        repeated string intentions = 1;   // The intentions of the descriptor
+        repeated string use_case_prompts = 2;   // The use case prompts of the descriptor
+
+        message Data {
+            repeated Requirement requirements = 1;   // The requirements of the descriptor
+            repeated Capability capabilities = 2;   // The capabilities of the descriptor
+        }
+
+        Data data = 3;  // The data associated with the descriptor
+    }
+
+    Configuration configuration = 4;    // The configuration of the descriptor
+}

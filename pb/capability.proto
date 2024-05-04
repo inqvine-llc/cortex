@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+enum Capability {
+    CAPABILITY_UNSPECIFIED = 0;
+    CAPABILITY_CREATE_PROCESSES = 1;    // The agent can create processes.
+    CAPABILITY_UPDATE_PROCESSES = 2;    // The agent can update processes.
+    CAPABILITY_ARCHIVE_PROCESSES = 3;    // The agent can archive processes.
+    CAPABILITY_DELETE_PROCESSES = 4;    // The agent can delete processes.
+    CAPABILITY_EXECUTE_PROCESSES = 5;    // The agent can execute processes.
+    CAPABILITY_MONITOR_PROCESSES = 6;    // The agent can monitor processes.
+    CAPABILITY_CREATE_REFLECTION = 7;    // The agent can create reflections.
+    CAPABILITY_QUERY_REFLECTIONS = 8;    // The agent can query reflections.
+    CAPABILITY_BUILD_PLANS = 9;    // The agent can build plans.
+    CAPABILITY_TEST_PLANS = 10;    // The agent can test plans.
+}

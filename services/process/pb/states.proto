@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package processes;
+
+enum ProcessState {
+    PROCESS_STATE_UNSPECIFIED = 0;  // The process has no state
+    PROCESS_STATE_DRAFT = 1;    // The process is in draft
+    PROCESS_STATE_IN_TEST = 2;  // The process is in testing
+    PROCESS_STATE_ARCHIVED = 3; // The process has been archived
+    PROCESS_STATE_DEFINED = 4;  // The process has been defined
+    PROCESS_STATE_READY = 5;    // The process is ready to be started
+    PROCESS_STATE_ACTIVE = 6;   // The process is active
+    PROCESS_STATE_INACTIVE = 7; // The process is inactive
+    PROCESS_STATE_AWAITING_INTERACTION = 8;   // The process is awaiting interaction from an agent
+    PROCESS_STATE_COMPLETED = 9;    // The process has been completed
+    PROCESS_STATE_CANCELLED = 10;   // The process has been cancelled
+    PROCESS_STATE_FAILED = 11;  // The process has failed
+}

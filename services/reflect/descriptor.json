@@ -1,0 +1,31 @@
+{
+    "name": "reflect",
+    "human_readable_name": "Reflection Service",
+    "human_readable_description": "Service to capture and store telemetry data related to process activities and reflect on the data to analyze process performance and predict outcomes.",
+    "configuration": {
+        "intentions": [
+            "Given I am a user",
+            "When I want to analyze the behavior of processes over time",
+            "Which may include using data from $requirements",
+            "Then I want to capture detailed telemetry data on process updates",
+            "And I want to use $connectors to integrate this data with analysis tools"
+        ],
+        "use_case_prompts": [
+            "The user wants to capture telemetry data for a specific process",
+            "The user queries telemetry data to analyze process performance",
+            "The user uses telemetry data to predict process outcomes",
+            "The user monitors real-time data for active processes"
+        ],
+        "data": {
+            "requirements": [
+                "memory",
+                "process",
+                "plan"
+            ],
+            "capabilities": [
+                "create_reflection",
+                "query_reflections"
+            ]
+        }
+    }
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package processes;
+
+enum ProcessType {
+    PROCESS_TYPE_UNSPECIFIED = 0;   // The process has no type
+    PROCESS_TYPE_AGENT_AGENT_CONVERSATION = 1;  // Agent to agent conversation
+    PROCESS_TYPE_AGENT_AGENT_RECOMMENDATION = 2;    // Agent to agent recommendation
+}

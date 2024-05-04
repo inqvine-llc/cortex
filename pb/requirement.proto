@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+enum Requirement {
+    REQUIREMENT_UNSPECIFIED = 0;    // The service requirement is unspecified
+    REQUIREMENT_AGENT = 1;   // The service requires an agent
+    REQUIREMENT_PLAN = 2;    // The service requires to be able to plan
+    REQUIREMENT_PROCESS = 3; // The service requires to be able to process
+    REQUIREMENT_SEARCH = 4;  // The service requires to be able to search
+    REQUIREMENT_REFLECT = 5; // The service requires to be able to reflect and create reflections
+    REQUIREMENT_LEARN = 6;   // The service requires to be able to learn and create learnings
+    REQUIREMENT_PREDICT = 7; // The service requires to be able to predict and create predictions
+    REQUIREMENT_RECOMMEND = 8;   // The service requires to be able to recommend and create recommendations
+}

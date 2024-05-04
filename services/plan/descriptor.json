@@ -1,0 +1,31 @@
+{
+    "name": "plan",
+    "human_readable_name": "Plan Service",
+    "human_readbale_description": "Service for planning the creation and execution of a process",
+    "configuration": {
+        "intentions": [
+            "Given I am a user",
+            "When I want to plan and schedule the completion of a process",
+            "Which may include any of the $requirements",
+            "Then I want the AI assistant to be able to build a plan for the process",
+            "And I want the AI assistant to reflect using the $connectors",
+            "And I want the AI assistant to be able to test the plan using the $capabilities",
+            "Then execute or scrap the plan based on the results before the process is executed"
+        ],
+        "use_case_prompts": [
+            "The user wants to plan and schedule the completion of a task",
+            "The user wants to test a planned process and gather data on the results",
+            "The user wants to reflect on a previously planned process and refine the plan based on the results for execution of another process",
+            "The user wants to build a plan for a process, but not execute it yet"
+        ],
+        "data": {
+            "requirements": [
+                "agents"
+            ],
+            "capabilities": [
+                "build_plans",
+                "test_plans"
+            ]
+        }
+    }
+}

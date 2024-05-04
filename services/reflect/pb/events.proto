@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package telemetry;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+
+import "services/processes/pb/process.proto";
+
+enum TelemetryEventCreator {
+    EVENT_CREATOR_UNKNOWN = 0;
+    EVENT_CREATOR_USER = 1;
+    EVENT_CREATOR_AGENT = 2;
+}
+
+message TelemetryEvent {
+    string event_id = 1; // UUID of the event (span ID)
+    string process_instance_id = 2; // Reference to the process instance
+
+    processes.ProcessState old_state = 3;   // The state of the process before the event
+    processes.ProcessState new_state = 4;   // The state of the process after the event
+
+    google.protobuf.Timestamp event_time = 5;
+    repeated processes.ProcessAgentFlags raised_agent_flags = 6;
+    repeated processes.ProcessAgentFlags resolved_agent_flags = 7;
+
+    google.protobuf.Timestamp created_at = 8;   // Timestamp of the event creation
+    google.protobuf.Timestamp updated_at = 9;   // Timestamp of the event update
+
+    TelemetryEventCreator creator = 10; // The creator of the event
+
+    google.protobuf.Any data = 11; // Any data attached to the event
+}
+
+message TelemetryData {
+    repeated TelemetryEvent events = 1;
+}
