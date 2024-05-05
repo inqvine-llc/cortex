@@ -1,0 +1,33 @@
+{
+    "id": "action",
+    "name": "Action Service",
+    "description": "Service to create, update, and manage actions",
+    "configuration": {
+        "intentions": [
+            "Given I am a user",
+            "When I need to manage the lifecycle of an action",
+            "Which may include any of the $requirements",
+            "Then I want to be able to create and view the status of action",
+            "And I want to interact through the $connectors"
+        ],
+        "use_case_prompts": [
+            "The user wants to wants to create a new action",
+            "The user wants to view the outcome of an action",
+            "The agent wants to perform an action on behalf of the user"
+        ],
+        "data": {
+            "requirements": [
+                "agent",
+                "plan"
+            ],
+            "capabilities": [
+                "create_processes",
+                "update_processes",
+                "archive_processes",
+                "delete_processes",
+                "execute_processes",
+                "monitor_processes"
+            ]
+        }
+    }
+}

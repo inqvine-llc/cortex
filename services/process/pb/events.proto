@@ -1,7 +1,0 @@
-syntax = "proto3";
-
-package telemetry;
-
-enum ProcessEventType {
-    PROCESS_EVENT_TYPE_UNKNOWN = 0;
-}

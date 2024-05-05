@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package reflect;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+
+import "../../services/action/pb/action.proto";
+
+enum Reflector {
+    REFLECTOR_UNKNOWN = 0;
+    REFLECTOR_AGENT = 1;
+    REFLECTOR_USER = 2;
+    REFLECTOR_SYSTEM = 3;
+}
+
+message Reflection {
+    string id = 1; // The unique identifier of the reflection
+    string raising_action_id = 2; // The action that raised the reflection
+
+    google.protobuf.Any old_data = 3; // The data before the reflection
+    google.protobuf.Any new_data = 4; // The data after the reflection
+    google.protobuf.Any metadata = 5; // The metadata of the event
+
+    repeated ActionFlag raised_flags = 6;    // The flags raised by the reflection
+    repeated ActionFlag resolved_flags = 7;  // The flags resolved by the reflection
+
+    google.protobuf.Timestamp created_at = 8;   // Timestamp of the event creation
+    Reflector reflector = 9; // The creator of the event
+
+    int32 agent_accessed_impact = 10; // The impact the agent determines on the reflection
+    int32 user_accessed_impact = 11; // The impact the user determines on the reflection
+}

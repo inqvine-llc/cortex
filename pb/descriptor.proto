@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-import "capability.proto";
 import "requirement.proto";
+import "capability.proto";
 
 message Descriptor {
-    string name = 1;    // The name of the descriptor
+    string id = 1;  // The unique identifier of the descriptor
     string human_readable_name = 2;    // The human readable name of the descriptor
     string human_readable_description = 3;  // The human readable description of the descriptor
 

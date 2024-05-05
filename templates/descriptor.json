@@ -1,0 +1,13 @@
+{
+    "id": "",
+    "name": "",
+    "description": "",
+    "configuration": {
+        "intentions": [],
+        "use_case_prompts": [],
+        "data": {
+            "requirements": [],
+            "capabilities": []
+        }
+    }
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package process;
+
+enum PlanState {
+    PLAN_STATE_UNSPECIFIED = 0;  // The plan has no state
+    PLAN_STATE_DRAFT = 1;    // The plan is in draft
+    PLAN_STATE_IN_TEST = 2;  // The plan is in testing
+    PLAN_STATE_ARCHIVED = 3; // The plan has been archived
+    PLAN_STATE_DEFINED = 4;  // The plan has been defined
+    PLAN_STATE_READY = 5;    // The plan is ready to be started
+    PLAN_STATE_ACTIVE = 6;   // The plan is active
+    PLAN_STATE_INACTIVE = 7; // The plan is inactive
+    PLAN_STATE_AWAITING_INTERACTION = 8;   // The plan is awaiting interaction from an agent
+    PLAN_STATE_COMPLETED = 9;    // The plan has been completed
+    PLAN_STATE_CANCELLED = 10;   // The plan has been cancelled
+    PLAN_STATE_FAILED = 11;  // The plan has failed
+}

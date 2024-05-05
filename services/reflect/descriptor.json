@@ -1,7 +1,7 @@
 {
-    "name": "reflect",
-    "human_readable_name": "Reflection Service",
-    "human_readable_description": "Service to capture and store telemetry data related to process activities and reflect on the data to analyze process performance and predict outcomes.",
+    "id": "reflect",
+    "name": "Reflection Service",
+    "description": "Service to capture and store telemetry data related to process activities and reflect on the data to analyze process performance and predict outcomes.",
     "configuration": {
         "intentions": [
             "Given I am a user",
@@ -19,7 +19,7 @@
         "data": {
             "requirements": [
                 "memory",
-                "process",
+                "action",
                 "plan"
             ],
             "capabilities": [

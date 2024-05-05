@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package process;
+
+enum ActionType {
+    ACTION_TYPE_UNSPECIFIED = 0;   // The action has no type
+    ACTION_TYPE_AGENT_USER_CONVERSATION = 1;  // Agent to user conversation
+    ACTION_TYPE_AGENT_USER_RECOMMENDATION = 2;    // Agent user recommendation
+}

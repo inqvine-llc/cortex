@@ -1,9 +1,0 @@
-enum ProcessAgentFlag {
-    PROCESS_AGENT_FLAG_UNSPECIFIED = 0; // The agent has no flags set
-    PROCESS_AGENT_FLAG_AWAITING_UNKOWN = 1; // The agent is awaiting for an unknown reason, and may need to reflect more on its traces
-    PROCESS_AGENT_FLAG_AWAITING_SLACK_MESSAGE = 2;  // The agent is awaiting a message from Slack
-    PROCESS_AGENT_FLAG_AWAITING_DISCORD_MESSAGE = 3;    // The agent is awaiting a message from Discord
-    PROCESS_AGENT_FLAG_AWAITING_CHAINED_AGENT = 4;  // The agent is awaiting information from another agent
-    PROCESS_AGENT_FLAG_AWAITING_CODE_EXECUTION = 5; // The agent is awaiting code execution of some kind
-    PROCESS_AGENT_FLAG_AWAITING_MOMENT = 6; // The agent is awaiting for a specific moment to progress
-}
